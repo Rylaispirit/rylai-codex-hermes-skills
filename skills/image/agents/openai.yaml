@@ -1,0 +1,6 @@
+interface:
+  display_name: "Image - Rylai"
+  short_description: "When the user wants to create, generate, edit, or optimize im..."
+  default_prompt: "Use $image to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true

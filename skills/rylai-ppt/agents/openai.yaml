@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rylai PPT Studio"
+  short_description: "Build editable PPTX decks from validated JSON"
+  default_prompt: "Use $rylai-ppt to create a polished editable presentation, validate its JSON deck spec, build the PPTX, and verify the result."
+policy:
+  allow_implicit_invocation: true

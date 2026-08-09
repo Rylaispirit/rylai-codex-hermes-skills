@@ -1,0 +1,32 @@
+{
+  "title": "Rylai Skill Kit",
+  "subtitle": "A portable workflow for Codex and Hermes",
+  "slides": [
+    {
+      "title": "Built for practical agent work",
+      "bullets": [
+        "Portable instructions for Codex and Hermes",
+        "Editable PowerPoint text and shapes",
+        "Local generation with explicit output paths"
+      ]
+    },
+    {
+      "title": "From source to presentation",
+      "bullets": [
+        "Read the source and define the audience",
+        "Assign one message to each slide",
+        "Build the deck from JSON",
+        "Inspect the final PowerPoint before delivery"
+      ]
+    },
+    {
+      "title": "Rylai release principles",
+      "bullets": [
+        "Keep provenance clear",
+        "Avoid remote placeholder assets",
+        "Prefer small deterministic workflows",
+        "Preserve editable deliverables"
+      ]
+    }
+  ]
+}

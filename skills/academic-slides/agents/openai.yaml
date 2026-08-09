@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic Slides - Rylai"
+  short_description: "Plan, create, and review academic presentations for conferenc..."
+  default_prompt: "Use $academic-slides to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true

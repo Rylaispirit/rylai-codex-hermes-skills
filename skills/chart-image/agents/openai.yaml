@@ -1,0 +1,6 @@
+interface:
+  display_name: "Chart Image - Rylai"
+  short_description: "Create publication-quality chart images from supplied data us..."
+  default_prompt: "Use $chart-image to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true

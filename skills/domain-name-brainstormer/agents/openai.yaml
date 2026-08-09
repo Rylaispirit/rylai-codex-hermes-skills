@@ -1,0 +1,6 @@
+interface:
+  display_name: "Domain Name Brainstormer - Rylai"
+  short_description: "Create and live-check brandable domain candidates."
+  default_prompt: "Use $domain-name-brainstormer to generate a focused domain shortlist, check the exact candidates with RDAP when network access is available, and clearly separate naming quality from registration status."
+policy:
+  allow_implicit_invocation: true

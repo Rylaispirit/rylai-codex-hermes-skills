@@ -1,0 +1,6 @@
+interface:
+  display_name: "DOCX by Rylai"
+  short_description: "Create, edit, inspect, and verify Word documents."
+  default_prompt: "Use $docx to create or edit this Word document with the Rylai workflow, preserve the source, and verify the saved output."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rylai Notes Infographic"
+  short_description: "Create consistent hand-drawn infographic series"
+  default_prompt: "Use $notion-infographic to plan, generate, and visually verify a concise hand-drawn infographic series from the supplied source."
+policy:
+  allow_implicit_invocation: true

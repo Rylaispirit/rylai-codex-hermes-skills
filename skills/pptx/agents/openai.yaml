@@ -1,0 +1,6 @@
+interface:
+  display_name: "PPTX by Rylai"
+  short_description: "Create, inspect, edit, extract, and verify PowerPoint decks."
+  default_prompt: "Use $pptx to complete this presentation task with local open-source tools and verify the output."
+policy:
+  allow_implicit_invocation: true

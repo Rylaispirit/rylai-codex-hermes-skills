@@ -1,0 +1,6 @@
+interface:
+  display_name: "Deep Research - Rylai"
+  short_description: "Conduct systematic source-backed research with scoped questio..."
+  default_prompt: "Use $deep-research to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true

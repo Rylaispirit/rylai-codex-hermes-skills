@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rylai Analytics Workflow"
+  short_description: "Build reproducible analysis code and notebooks"
+  default_prompt: "Use $analytics-data-analysis to implement a reproducible analysis, validate the real inputs, and verify every generated output."
+policy:
+  allow_implicit_invocation: true

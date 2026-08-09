@@ -1,0 +1,6 @@
+interface:
+  display_name: "Markdown Converter - Rylai"
+  short_description: "Safely convert local files to Markdown with MarkItDown."
+  default_prompt: "Use $markdown-converter to convert only local files through the guarded MarkItDown wrapper, preserve the source, and inspect the generated Markdown before reporting success."
+policy:
+  allow_implicit_invocation: true

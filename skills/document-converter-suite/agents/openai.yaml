@@ -1,0 +1,6 @@
+interface:
+  display_name: "Document Converter Suite - Rylai"
+  short_description: "Convert local documents with checked fallback routes."
+  default_prompt: "Use $document-converter-suite to inspect available converters, choose the safest local route, preserve the source, and verify the generated document or extracted data."
+policy:
+  allow_implicit_invocation: true

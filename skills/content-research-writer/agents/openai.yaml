@@ -1,0 +1,6 @@
+interface:
+  display_name: "Content Research Writer - Rylai"
+  short_description: "Assists in writing high-quality content by conducting researc..."
+  default_prompt: "Use $content-research-writer to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true

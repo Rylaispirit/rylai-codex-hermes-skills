@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rylai Academic Writing"
+  short_description: "Structure and revise rigorous academic prose"
+  default_prompt: "Use $academic-writing-style to improve this academic document while preserving its meaning and verifying evidence and citation integrity."
+policy:
+  allow_implicit_invocation: true

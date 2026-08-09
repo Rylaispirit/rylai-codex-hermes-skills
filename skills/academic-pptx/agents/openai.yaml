@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic PPTX - Rylai"
+  short_description: "Plan, build, render, and verify evidence-based academic decks."
+  default_prompt: "Use $academic-pptx to turn the supplied research material into an editable academic presentation, preserve evidence and citations, render every slide, and report visual QA."
+policy:
+  allow_implicit_invocation: true

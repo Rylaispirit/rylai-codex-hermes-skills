@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rylai Data Analyzer"
+  short_description: "Extract defensible findings from real datasets"
+  default_prompt: "Use $data-analyzer to inspect this dataset, validate its quality, calculate the requested findings, and separate evidence from inference."
+policy:
+  allow_implicit_invocation: true

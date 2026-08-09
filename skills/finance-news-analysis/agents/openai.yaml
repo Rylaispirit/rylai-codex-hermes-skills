@@ -1,0 +1,6 @@
+interface:
+  display_name: "Finance News Analysis - Rylai"
+  short_description: "Analyze current financial news for sentiment, market or secto..."
+  default_prompt: "Use $finance-news-analysis to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true

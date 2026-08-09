@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rylai Dashboard Creator"
+  short_description: "Build practical KPI and analytics dashboards"
+  default_prompt: "Use $dashboard-creator to build this dashboard, preserve the project's design system, and verify data, interactions, and responsive layout."
+policy:
+  allow_implicit_invocation: true

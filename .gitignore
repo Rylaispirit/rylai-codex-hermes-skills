@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+work/
+dist/
+*.zip
+exact-source-matches.csv

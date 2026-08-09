@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ui Designer - Rylai"
+  short_description: "Extract a practical design system from screenshots or mockups..."
+  default_prompt: "Use $ui-designer to handle this request with its portable workflow, then verify all required tools and dependencies."
+policy:
+  allow_implicit_invocation: true
