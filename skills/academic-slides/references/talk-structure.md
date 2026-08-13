@@ -1,6 +1,6 @@
 # Academic Talk Structures
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 ## Conference Talk
 
@@ -15,7 +15,7 @@ committee knows where each chapter fits.
 
 ## Lab Meeting
 
-Decision or question -> current evidence -> unresolved issue -> proposed nex
+Decision or question -> current evidence -> unresolved issue -> proposed next
 experiment -> risks -> requested feedback. Show enough implementation detail for
 peers to challenge the plan.
 

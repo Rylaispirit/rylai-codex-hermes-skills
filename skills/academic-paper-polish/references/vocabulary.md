@@ -1,6 +1,6 @@
 # Precise Academic Vocabulary
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 Prefer accurate common words over ornate synonyms.
 
@@ -37,7 +37,7 @@ Prefer accurate common words over ornate synonyms.
 - "In order to" -> "To"
 - "Due to the fact that" -> "Because"
 - "It can be seen that" -> state the observation directly
-- "A large number of" -> "Many" or the exact coun
+- "A large number of" -> "Many" or the exact count
 - "Has the ability to" -> "Can"
 - "In terms of" -> name the dimension directly
 

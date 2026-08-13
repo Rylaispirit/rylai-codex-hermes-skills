@@ -12,7 +12,7 @@
 
 ## Choice Or Discovery
 
-## Ending Bea
+## Ending Beat
 
 ## Continuity Check
 

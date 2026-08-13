@@ -1,9 +1,9 @@
 # Summary Output Patterns
 
-These compact templates belong to the Rylai Codex-Hermes workflow. Omit empty
+These compact templates belong to the Rylai Codex-Hermes-Claude workflow. Omit empty
 sections rather than filling them with generic text.
 
-## Snapsho
+## Snapshot
 
 ```markdown
 **Bottom line:** [main point]
@@ -11,7 +11,7 @@ sections rather than filling them with generic text.
 - [essential fact]
 - [essential implication]
 - [next action, if present]
-
+```
 
 ## Executive Brief
 
@@ -33,7 +33,7 @@ sections rather than filling them with generic text.
 | Owner | Action | Due |
 |---|---|---|
 | [stated owner] | [agreed action] | [stated date] |
-
+```
 
 ## Technical Summary
 
@@ -45,7 +45,7 @@ sections rather than filling them with generic text.
 ## Trade-offs And Limits
 ## Breaking Changes
 ## Tests And Follow-up
-
+```
 
 ## Meeting Summary
 
@@ -57,9 +57,9 @@ sections rather than filling them with generic text.
 ## Reasoning
 ## Disagreements
 ## Open Questions
+```
 
-
-## Research Diges
+## Research Digest
 
 ```markdown
 ## Question
@@ -68,7 +68,7 @@ sections rather than filling them with generic text.
 ## Limitations
 ## Interpretation
 ## Practical Implications
-
+```
 
 ## Multi-Source Synthesis
 
@@ -80,7 +80,7 @@ sections rather than filling them with generic text.
 |---|---|---|
 ## Gaps
 ## Combined Takeaway
-
+```
 
 Before release, compare the summary with the source for names, quantities, dates,
 units, attribution, uncertainty, and negation.

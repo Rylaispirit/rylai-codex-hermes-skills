@@ -1,6 +1,6 @@
 # Academic Deck Content Guide
 
-This guide is part of the Rylai Codex-Hermes academic presentation workflow.
+This guide is part of the Rylai Codex-Hermes-Claude academic presentation workflow.
 Use it to decide what belongs in the talk before styling slides.
 
 ## 1. Establish the Central Position
@@ -28,7 +28,7 @@ Track each important claim with:
 | Citation | Source details sufficient for the deck |
 | Risk | Likely objection or possible misinterpretation |
 
-Remove unsupported claims. If a claim is useful but preliminary, label i
+Remove unsupported claims. If a claim is useful but preliminary, label it
 honestly rather than presenting it as settled.
 
 ## 3. Convert Documents into a Talk
@@ -62,7 +62,7 @@ Good title functions include:
 - explain why a method choice matters;
 - connect evidence to an implication.
 
-Avoid exaggerated certainty, promotional adjectives, and novelty claims tha
+Avoid exaggerated certainty, promotional adjectives, and novelty claims that
 the available sources do not establish.
 
 ## 5. Protect Evidence Integrity
@@ -163,7 +163,7 @@ Notes can contain:
 
 Notes should support delivery, not duplicate every visible word.
 
-## 12. Time the Argumen
+## 12. Time the Argument
 
 Allocate time according to importance and cognitive load. As a starting point:
 
@@ -175,7 +175,7 @@ Allocate time according to importance and cognitive load. As a starting point:
 Rehearse aloud. If the talk is too long, remove material from the main deck.
 Speaking faster usually reduces comprehension and weakens the argument.
 
-## Content Review Checklis
+## Content Review Checklist
 
 - The central position and its boundary are explicit.
 - Each major claim has traceable evidence.

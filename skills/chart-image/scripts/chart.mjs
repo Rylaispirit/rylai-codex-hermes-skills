@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Portable SVG chart generator for Codex and Hermes.
+ * Portable SVG chart generator for Codex, Hermes, and Claude.
  * Authored by Rylai as a dependency-free replacement for the missing legacy CLI.
  */
 

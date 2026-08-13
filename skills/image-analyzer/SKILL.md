@@ -1,17 +1,19 @@
 ---
 name: image-analyzer
-description: "Inspect local or supplied images with available Codex or Hermes vision capabilities. Use for OCR, visual description, object inspection, layout review, comparison, and structured extraction."
+description: Inspect supplied images with available vision tools for OCR, visual description, object inspection, layout review, comparison, and structured extraction.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "media"
+    category: media
+  claude:
+    category: media
 ---
 
-> Rylai Codex-Hermes Edition | Original portable workflow by Rylai
+> Rylai Codex-Hermes-Claude Edition | Original portable workflow by Rylai
 
 # Image Analyzer
 
@@ -30,14 +32,14 @@ Analyze the supplied image itself before making claims.
 
 ## Runtime Routes
 
-- Codex: use the available image viewer or native vision capability.
-- Hermes: use its configured vision tool.
+- Use the image viewer or native vision capability available in Codex, Hermes,
+  or Claude.
 - Use an external OCR or vision service only when the user approves it and the
   required credentials are already configured.
 
 ## Safety
 
-- Do not infer sensitive identity, health, ethnicity, or exact location withou
+- Do not infer sensitive identity, health, ethnicity, or exact location without
   reliable evidence and a legitimate user request.
 - Do not claim that an object, logo, person, or place is certain when the image
   only supports a tentative match.

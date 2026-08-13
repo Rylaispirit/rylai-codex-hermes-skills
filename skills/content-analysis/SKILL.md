@@ -1,25 +1,27 @@
 ---
 name: content-analysis
-description: "Analyze articles, documents, videos, podcasts, transcripts, and mixed media for arguments, evidence, themes, assumptions, contradictions, practical lessons, and unanswered questions. Use when the user wants more than a summary or asks for insights, critique, takeaways, or source-grounded analysis."
+description: Analyze articles, documents, videos, podcasts, and transcripts for arguments, evidence, themes, assumptions, contradictions, insights, and unanswered questions.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  provenance: "clean-room-original"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
+  maintainer: Rylai
+  adapted_by: Rylai
+  provenance: clean-room-original
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
   hermes:
-    category: "content"
+    category: content
+  claude:
+    category: content
 ---
 
 # Content Analysis
 
-Turn source material into a structured explanation of what it says, how i
+Turn source material into a structured explanation of what it says, how it
 supports its claims, what follows from it, and where uncertainty remains.
 
 ## Runtime Compatibility
 
 - Resolve local files from the current workspace or this skill directory.
-- Use available Codex or Hermes tools to fetch, transcribe, or inspect the source.
+- Use tools available in the active runtime to fetch, transcribe, or inspect the source.
 - Verify that extraction or transcription is usable before analyzing details.
 - If access is incomplete, describe the exact boundary of the analysis.
 
@@ -65,7 +67,7 @@ Choose only the lenses that serve the request:
    - Check names, numbers, dates, and attribution.
    - Remove observations that cannot be traced to the material.
 
-## Default Outpu
+## Default Output
 
 ```markdown
 ## Overview
@@ -89,7 +91,7 @@ Choose only the lenses that serve the request:
 
 ## Source Limits
 - [Access, extraction, transcription, or scope limitation]
-
+```
 
 Change this structure when the user asks for a critique, comparison, timeline,
 study guide, action plan, or another specific deliverable.

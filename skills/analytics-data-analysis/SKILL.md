@@ -1,21 +1,23 @@
 ---
 name: analytics-data-analysis
-description: "Implement reproducible analytics work in scripts or notebooks, from data ingestion and quality checks through transformation, statistical analysis, visualization, and delivery. Use when the user wants working analysis code, a repeatable pipeline, a notebook, or an analytics implementation."
+description: Build reproducible analytics scripts or notebooks for ingestion, cleaning, transformation, statistics, visualization, and delivery.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "data"
+    category: data
+  claude:
+    category: data
 ---
 
 # Rylai Analytics Implementation
 
 Build analysis that another person can rerun and audit.
 
-## Define The Contrac
+## Define The Contract
 
 Capture the following before choosing methods:
 
@@ -98,4 +100,4 @@ Never present an estimate as observed fact or infer causation from association a
 
 - Use tools and libraries already available in the workspace when practical.
 - If a dependency is missing, explain the smallest installation or fallback required.
-- Keep paths portable between Codex and Hermes by resolving from the workspace or skill directory.
+- Keep paths portable between Codex, Hermes, and Claude by resolving from the workspace or skill directory.

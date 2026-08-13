@@ -1,29 +1,32 @@
 ---
 name: netlify-deploy
-description: "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys."
+description: Deploy web projects to Netlify with the Netlify CLI. Use for authentication, site linking, preview deploys, production deploys, and post-deploy verification.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "adapted-open-source"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: adapted-open-source
   upstream:
-    url: "https://github.com/openai/skills"
-    revision: "49f948faa9258a0c61caceaf225e179651397431"
-    license: "Apache-2.0"
+    url: https://github.com/openai/skills
+    revision: 49f948faa9258a0c61caceaf225e179651397431
+    license: Apache-2.0
   hermes:
-    category: "devops"
+    category: devops
+  claude:
+    category: devops
 ---
 
-> Rylai Codex-Hermes Edition | Maintained and adapted by Rylai
+> Rylai Codex-Hermes-Claude Edition | Maintained and adapted by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/netlify-deploy` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/netlify-deploy`.
 - Hermes: install under `~/.hermes/skills/netlify-deploy` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/netlify-deploy` or `<project>/.claude/skills/netlify-deploy`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 
 # Netlify Deployment Skill
 
@@ -49,8 +52,8 @@ This skill automates Netlify deployments by:
 
 The skill uses the **pre-authenticated Netlify CLI** approach:
 
-1. Check authentication status with `npx netlify status
-2. If not authenticated, guide user through `npx netlify login
+1. Check authentication status with `npx netlify status`.
+2. If not authenticated, guide user through `npx netlify login`.
 3. Fail gracefully if authentication cannot be established
 
 Authentication uses either:
@@ -65,7 +68,7 @@ Check if the user is logged into Netlify:
 
 ```bash
 npx netlify status
-
+```
 
 **Expected output patterns**:
 - ✅ Authenticated: Shows logged-in user email and site link status
@@ -75,7 +78,7 @@ npx netlify status
 
 ```bash
 npx netlify login
-
+```
 
 This opens a browser window for OAuth authentication. Wait for user to complete login, then verify with `netlify status` again.
 
@@ -105,21 +108,21 @@ From `netlify status` output, determine:
 git remote show origin
 
 # If Git-based, extract remote URL
-# Format: https://github.com/username/repo or git@github.com:username/repo.gi
+# Format: https://github.com/username/repo or git@github.com:username/repo.git
 
 # Try to link by Git remote
 npx netlify link --git-remote-url <REMOTE_URL>
-
+```
 
 **If link fails** (site doesn't exist on Netlify):
 
 ```bash
 # Create new site interactively
-npx netlify ini
-
+npx netlify init
+```
 
 This guides user through:
-1. Choosing team/accoun
+1. Choosing team/account
 2. Setting site name
 3. Configuring build settings
 4. Creating netlify.toml if needed
@@ -134,7 +137,7 @@ npm install
 
 # For other package managers, detect and use appropriate command
 # yarn install, pnpm install, etc.
-
+```
 
 ### 5. Deploy to Netlify
 
@@ -144,7 +147,7 @@ Choose deployment type based on context:
 
 ```bash
 npx netlify deploy
-
+```
 
 This creates a deploy preview with a unique URL for testing.
 
@@ -152,7 +155,7 @@ This creates a deploy preview with a unique URL for testing.
 
 ```bash
 npx netlify deploy --prod
-
+```
 
 This deploys to the live production URL.
 
@@ -165,7 +168,7 @@ This deploys to the live production URL.
 ### 6. Report Results
 
 After deployment, report to user:
-- **Deploy URL**: Unique URL for this deploymen
+- **Deploy URL**: Unique URL for this deployment
 - **Site URL**: Production URL (if production deploy)
 - **Deploy logs**: Link to Netlify dashboard for logs
 - **Next steps**: Suggest `netlify open` to view site or dashboard
@@ -173,12 +176,12 @@ After deployment, report to user:
 ## Handling netlify.toml
 
 If a `netlify.toml` file exists, the CLI uses it automatically. If not, the CLI will prompt for:
-- **Build command**: e.g., `npm run build`, `next build
-- **Publish directory**: e.g., `dist`, `build`, `.nex
+- **Build command**: e.g., `npm run build`, `next build`
+- **Publish directory**: e.g., `dist`, `build`, `.next`
 
 Common framework defaults:
-- **Next.js**: build command `npm run build`, publish `.nex
-- **React (Vite)**: build command `npm run build`, publish `dis
+- **Next.js**: build command `npm run build`, publish `.next`
+- **React (Vite)**: build command `npm run build`, publish `dist`
 - **Static HTML**: no build command, publish current directory
 
 The skill should detect framework from `package.json` if possible and suggest appropriate settings.
@@ -193,12 +196,12 @@ npx netlify status
 npx netlify login
 
 # 2. Link site (if needed)
-# Try Git-based linking firs
+# Try Git-based linking first
 git remote show origin
 npx netlify link --git-remote-url https://github.com/user/repo
 
 # If no site exists, create new one:
-npx netlify ini
+npx netlify init
 
 # 3. Install dependencies
 npm install
@@ -208,17 +211,17 @@ npx netlify deploy
 
 # 5. Deploy to production (when ready)
 npx netlify deploy --prod
-
+```
 
 ## Error Handling
 
 Common issues and solutions:
 
 **"Not logged in"**
-→ Run `npx netlify login
+→ Run `npx netlify login`
 
 **"No site linked"**
-→ Run `npx netlify link` or `npx netlify ini
+→ Run `npx netlify link` or `npx netlify init`
 
 **"Build failed"**
 → Check build command and publish directory in netlify.toml or CLI prompts
@@ -227,7 +230,7 @@ Common issues and solutions:
 
 **"Publish directory not found"**
 → Verify build command ran successfully
-→ Check publish directory path is correc
+→ Check publish directory path is correct
 
 ## Troubleshooting
 
@@ -245,9 +248,9 @@ The deploy needs escalated network access to deploy to Netlify. I can rerun the 
 
 For secrets and configuration:
 
-1. Never commit secrets to Gi
+1. Never commit secrets to Git
 2. Set in Netlify dashboard: Site Settings → Environment Variables
-3. Access in builds via `process.env.VARIABLE_NAME
+3. Access in builds via `process.env.VARIABLE_NAME`
 
 ## Tips
 

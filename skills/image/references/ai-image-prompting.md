@@ -1,6 +1,6 @@
 # Model-Neutral Image Prompting
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 ## Prompt Structure
 
@@ -17,20 +17,20 @@ Describe:
 
 ## Product Image
 
-```tex
+```text
 [Product] shown from [angle] on [surface/environment]. Preserve exact shape,
 materials, controls, and branding from the supplied reference. [Lighting].
 [Composition and negative space]. [Aspect ratio]. No invented ports, labels,
 accessories, or interface details.
-
+```
 
 ## Editorial Illustration
 
-```tex
+```text
 Illustrate [single idea] through [visual metaphor]. [Characters or objects],
 [composition], [palette], [line or paint treatment], [mood]. Keep the hierarchy
 clear at thumbnail size. No decorative text unless explicitly requested.
-
+```
 
 ## UI Or Screenshot Rule
 

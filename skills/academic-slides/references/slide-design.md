@@ -1,6 +1,6 @@
 # Academic Slide Design
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 1. Use one claim per slide.
 2. Write titles as conclusions, not topic labels.
@@ -13,9 +13,9 @@
 9. Keep comparisons on the same scale.
 10. Move dense tables, derivations, and secondary evidence to the appendix.
 
-## Results Layou
+## Results Layout
 
-Place the figure or table where it can be read at presentation size. Add a shor
+Place the figure or table where it can be read at presentation size. Add a short
 annotation pointing to the evidence that supports the title. Do not rely on the
 speaker to explain an unlabeled visual.
 

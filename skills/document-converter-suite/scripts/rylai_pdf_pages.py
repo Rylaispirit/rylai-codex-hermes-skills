@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Inspect and modify PDF page sets with pypdf.
 
-Original utility maintained by Rylai for Codex and Hermes skill workflows.
+Original utility maintained by Rylai for Codex, Hermes, and Claude skill workflows.
 """
 
 from __future__ import annotations

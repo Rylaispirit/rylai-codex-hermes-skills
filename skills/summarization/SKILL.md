@@ -1,14 +1,16 @@
 ---
 name: summarization
-description: "Create accurate summaries of documents, articles, meetings, conversations, research, code changes, and multi-source material. Use for TLDRs, executive briefs, key points, action items, technical summaries, research digests, or concise catch-up notes."
+description: Create accurate summaries of documents, articles, meetings, research, code changes, or multiple sources as briefs, key points, actions, or catch-up notes.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  provenance: "clean-room-original"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
+  maintainer: Rylai
+  adapted_by: Rylai
+  provenance: clean-room-original
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
   hermes:
-    category: "content"
+    category: content
+  claude:
+    category: content
 ---
 
 # Summarization
@@ -19,7 +21,7 @@ uncertainty, and useful detail.
 ## Runtime Compatibility
 
 - Resolve bundled files relative to this skill directory.
-- Use available Codex or Hermes tools to read the actual source material.
+- Use tools available in the active runtime to read the actual source material.
 - Do not claim full coverage of inaccessible, truncated, or unsupported input.
 - Verify extraction quality when the source is a scan, recording, or complex file.
 
@@ -97,7 +99,7 @@ Use for notes, chats, and email threads:
 
 Do not assign an owner or deadline that was not explicitly agreed.
 
-### Research Diges
+### Research Digest
 
 Use for papers and analytical material:
 
@@ -137,7 +139,7 @@ Scale by information density and user need, not page count alone.
 
 ## Optional Templates
 
-Load `summary-templates.md` when a reusable output skeleton will save time. Adap
+Load `summary-templates.md` when a reusable output skeleton will save time. Adapt
 the template to the source instead of filling empty sections mechanically.
 
 ## Final Check

@@ -1,8 +1,8 @@
 # Model-Neutral Video Prompting
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
-## Shot Promp
+## Shot Prompt
 
 Specify:
 
@@ -10,7 +10,7 @@ Specify:
 - Starting state and visible action
 - Environment and time
 - Shot size and camera position
-- Camera movemen
+- Camera movement
 - Lighting and color
 - Motion speed and physical constraints
 - Duration and aspect ratio
@@ -19,7 +19,7 @@ Specify:
 
 ## Example Structure
 
-```tex
+```text
 Duration: [seconds]. Aspect ratio: [ratio].
 Subject: [specific description].
 Scene: [environment and time].
@@ -29,7 +29,7 @@ Lighting: [source and mood].
 Continuity: keep [identity, clothing, product details] unchanged.
 Audio: [voice, ambience, music, or none].
 Avoid: [likely defects only].
-
+```
 
 ## Multi-Shot Sequence
 

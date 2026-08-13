@@ -1,25 +1,28 @@
 ---
 name: academic-paper-polish
-description: "Polish academic and research writing for clarity, structure, terminology, argumentation, and cautious claims without inventing evidence or citations."
+description: Polish academic and research writing for clarity, structure, terminology, argumentation, and cautious claims without inventing evidence or citations.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "academic"
+    category: academic
+  claude:
+    category: academic
 ---
 
-> Rylai Codex-Hermes Edition | Original portable workflow by Rylai
+> Rylai Codex-Hermes-Claude Edition | Original portable workflow by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/academic-paper-polish` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/academic-paper-polish`.
 - Hermes: install under `~/.hermes/skills/academic-paper-polish` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/academic-paper-polish` or `<project>/.claude/skills/academic-paper-polish`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 
 # Academic Paper Polish
 

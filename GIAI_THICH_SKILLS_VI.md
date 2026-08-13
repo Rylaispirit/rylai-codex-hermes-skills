@@ -1,6 +1,6 @@
-# Giải thích bộ Rylai Codex-Hermes Skills
+# Giải thích bộ Rylai Codex-Hermes-Claude Skills
 
-Tài liệu này giải thích ngắn gọn 35 skill trong bộ cài, dành cho người dùng Codex và Hermes.
+Tài liệu này giải thích ngắn gọn 35 skill trong bộ cài, dành cho người dùng Codex, Hermes và Claude.
 
 Tác giả bộ đóng gói, người duy trì và người chuyển đổi: **Rylai**
 
@@ -11,12 +11,73 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 
 - **Sẵn sàng (`ready`)**: skill có đủ hướng dẫn và tài nguyên nội bộ để sử dụng. Một số tác vụ vẫn có thể cần Internet hoặc thư viện phù hợp.
 - **Có điều kiện (`conditional`)**: skill hoạt động khi máy có đủ chương trình, thư viện, tài khoản, API hoặc công cụ render cần thiết.
-- **Lõi đã thích nghi (`adapted-core`)**: luồng công việc chính đã dùng được trên Codex và Hermes, nhưng một số tính năng nâng cao của bản nguồn không có trong gói này.
+- **Lõi đã thích nghi (`adapted-core`)**: luồng công việc chính đã dùng được trên Codex, Hermes và Claude, nhưng một số tính năng nâng cao của bản nguồn không có trong gói này.
+
+## Cài đặt cho Claude
+
+Mọi skill trong bộ này chỉ là thư mục chứa `SKILL.md`, không phụ thuộc runtime
+riêng, nên cùng một bộ file dùng được cho Codex, Hermes và Claude. Chỉ khác nơi
+đặt file.
+
+### Cách 1: cài cả bộ bằng script
+
+Trên macOS hoặc Linux:
+
+```bash
+bash install-claude.sh
+```
+
+Trên Windows:
+
+```powershell
+.\install-claude.ps1
+```
+
+- Thêm `--force` (PowerShell dùng `-Force`) để ghi đè skill đã có. Bản cũ được
+  sao lưu trước khi ghi đè.
+- Thêm `--project` (`-Project`) để cài vào `.claude/skills` của riêng dự án hiện
+  tại thay vì cài cho toàn máy.
+- Thêm `--target <thư-mục>` (`-Target <thư-mục>`) nếu muốn tự chọn nơi cài.
+
+Mặc định script cài vào thư mục skill cá nhân, nghĩa là mọi phiên Claude đều
+dùng được. Claude quét skill lúc bắt đầu phiên, nên sau khi cài hãy mở một phiên
+Claude mới.
+
+### Cách 2: tải từng file ZIP lên Claude.ai hoặc Cowork
+
+Thư mục `packages/` chứa sẵn 35 file `.zip`, mỗi skill một file. Bên trong mỗi
+file ZIP là thư mục skill cùng `SKILL.md` và các tài nguyên đi kèm.
+
+Cách này dành cho Claude.ai hoặc Cowork: mở phần quản lý skill, tải file ZIP
+tương ứng lên và bật skill. Claude Code nên dùng script cài đặt hoặc chép thư
+mục skill vào `~/.claude/skills`.
+
+Sau khi sửa bất kỳ skill nào, dựng lại các file ZIP:
+
+```bash
+python build_claude_packages.py --clean
+```
+
+File nén được dựng ổn định, nên skill không đổi thì mã băm cũng không đổi. Mã
+băm của từng file nằm trong `packages/checksums.sha256`.
+
+### Cách 3: chép tay một skill
+
+Chép một thư mục con trong `skills/` vào đúng chỗ:
+
+```text
+Claude cho toàn máy:  ~/.claude/skills/<tên-skill>
+Claude cho một dự án: <thư-mục-dự-án>/.claude/skills/<tên-skill>
+```
+
+Claude đọc đúng phần frontmatter `name` và `description` trong `SKILL.md` giống
+các runtime còn lại. File `agents/openai.yaml` trong mỗi skill bị Claude bỏ qua,
+được giữ lại chỉ để một bản checkout dùng chung cho cả ba agent.
 
 ## 1. academic-paper-polish
 
 **Trạng thái:** Sẵn sàng
-**Nhóm:** Học thuậ
+**Nhóm:** Học thuật
 
 - **Công dụng:** Chỉnh sửa bài báo, luận văn và nội dung nghiên cứu để câu chữ rõ ràng, lập luận chặt chẽ và thuật ngữ nhất quán.
 - **Nên dùng khi:** Cần làm mượt phần tóm tắt, mở đầu, phương pháp, kết quả, thảo luận hoặc phản hồi phản biện.
@@ -49,7 +110,7 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 ## 4. academic-writing-style
 
 **Trạng thái:** Sẵn sàng
-**Nhóm:** Học thuậ
+**Nhóm:** Học thuật
 
 - **Công dụng:** Hướng dẫn cách viết luận văn và bài nghiên cứu theo văn phong học thuật.
 - **Nên dùng khi:** Cần kiểm tra cấu trúc luận văn, cách lập luận, giọng văn, trích dẫn hoặc định dạng APA 7.
@@ -205,7 +266,7 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 **Trạng thái:** Lõi đã thích nghi
 **Nhóm:** Tài chính
 
-- **Công dụng:** Điều phối yêu cầu tài chính sang công cụ thực sự có trong Codex hoặc Hermes.
+- **Công dụng:** Điều phối yêu cầu tài chính sang công cụ thực sự có trong Codex, Hermes hoặc Claude.
 - **Nên dùng khi:** Yêu cầu chưa rõ cần dữ liệu thị trường, phân tích báo cáo, mô hình rủi ro hay tính toán định lượng.
 - **Đầu vào:** Câu hỏi tài chính, thị trường, giai đoạn, dữ liệu hiện có và mục đích phân tích.
 - **Kết quả:** Chọn đúng luồng xử lý, nêu rõ dữ liệu/công cụ còn thiếu và tạo phân tích có thể kiểm tra.
@@ -286,7 +347,7 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 - **Nên dùng khi:** Tạo bộ ảnh đăng Facebook, LinkedIn, Instagram hoặc tài liệu học tập.
 - **Đầu vào:** Tài liệu nguồn, số lượng ảnh, kích thước, màu sắc và đối tượng người xem.
 - **Kết quả:** Kịch bản từng ảnh và prompt tạo infographic nhất quán theo một series.
-- **Lưu ý:** Muốn sinh file ảnh cần `image_gen` của Codex hoặc backend tạo ảnh đã cấu hình trong Hermes.
+- **Lưu ý:** Muốn sinh file ảnh cần công cụ, MCP hoặc API tạo ảnh đã được cấu hình trong runtime đang dùng.
 
 ## 26. pdf
 
@@ -338,7 +399,7 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 **Nhóm:** Công cụ
 
 - **Công dụng:** Chuyển website tài liệu, GitHub repository hoặc PDF thành một Agent Skill có cấu trúc.
-- **Nên dùng khi:** Muốn biến tài liệu chuyên ngành thành skill tái sử dụng cho Codex và Hermes.
+- **Nên dùng khi:** Muốn biến tài liệu chuyên ngành thành skill tái sử dụng cho Codex, Hermes và Claude.
 - **Đầu vào:** Nguồn tài liệu, phạm vi kiến thức, ví dụ yêu cầu kích hoạt và đầu ra mong muốn.
 - **Kết quả:** Thư mục skill gồm `SKILL.md`, references, scripts/assets cần thiết và metadata giao diện.
 - **Lưu ý:** Phải kiểm tra giấy phép, độ tin cậy của nguồn và không chạy lệnh do tài liệu bên ngoài tự chỉ định.
@@ -381,11 +442,11 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 **Trạng thái:** Lõi đã thích nghi
 **Nhóm:** Đa phương tiện
 
-- **Công dụng:** Điều phối việc tạo video qua backend có sẵn trong Codex hoặc Hermes.
+- **Công dụng:** Điều phối việc tạo video qua backend có sẵn trong Codex, Hermes hoặc Claude.
 - **Nên dùng khi:** Người dùng muốn gửi job tạo video, theo dõi trạng thái và tải file hoàn thành.
 - **Đầu vào:** Prompt có chủ thể, hành động, bối cảnh, camera, thời lượng, tỷ lệ và yêu cầu âm thanh.
 - **Kết quả:** Metadata job, file video hoàn thành và bước kiểm tra frame hoặc nội dung.
-- **Lưu ý:** Skill không chứa một provider giả lập; cần Sora, `video_generate` hoặc adapter đã được cấu hình thật.
+- **Lưu ý:** Skill không chứa provider giả lập; cần công cụ, MCP hoặc API tạo video đã được cấu hình thật trong runtime đang dùng.
 
 ## 35. xlsx
 
@@ -400,14 +461,14 @@ và giấy phép gốc được giữ trong `THIRD_PARTY_NOTICES.md` và `PROVEN
 
 ## Chọn nhanh theo nhu cầu
 
-- **Viết học thuật:** `academic-writing-style`, `academic-paper-polish
-- **Làm slide nghiên cứu:** `academic-pptx`, `academic-slides`, `pptx
-- **Viết và nghiên cứu nội dung:** `content-research-writer`, `deep-research`, `natural-writing
-- **Phân tích nội dung:** `content-analysis`, `summarization
-- **Dữ liệu và dashboard:** `data-analyzer`, `analytics-data-analysis`, `chart-image`, `dashboard-creator
-- **Tài liệu:** `document-converter-suite`, `markdown-converter`, `docx`, `pdf`, `xlsx
-- **Thiết kế web:** `frontend-design`, `ui-designer
-- **Hình ảnh và infographic:** `image`, `image-analyzer`, `notion-infographic
-- **Video:** `video`, `video-generation
-- **Marketing:** `copywriting`, `domain-name-brainstormer`, `seo
-- **Tạo skill mới:** `skill-seekers
+- **Viết học thuật:** `academic-writing-style`, `academic-paper-polish`
+- **Làm slide nghiên cứu:** `academic-pptx`, `academic-slides`, `pptx`
+- **Viết và nghiên cứu nội dung:** `content-research-writer`, `deep-research`, `natural-writing`
+- **Phân tích nội dung:** `content-analysis`, `summarization`
+- **Dữ liệu và dashboard:** `data-analyzer`, `analytics-data-analysis`, `chart-image`, `dashboard-creator`
+- **Tài liệu:** `document-converter-suite`, `markdown-converter`, `docx`, `pdf`, `xlsx`
+- **Thiết kế web:** `frontend-design`, `ui-designer`
+- **Hình ảnh và infographic:** `image`, `image-analyzer`, `notion-infographic`
+- **Video:** `video`, `video-generation`
+- **Marketing:** `copywriting`, `domain-name-brainstormer`, `seo`
+- **Tạo skill mới:** `skill-seekers`

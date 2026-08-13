@@ -1,6 +1,6 @@
 # Netlify Deployment Patterns
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 ## Static Site
 

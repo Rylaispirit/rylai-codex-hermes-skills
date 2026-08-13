@@ -1,6 +1,6 @@
 # UI Implementation Handoff
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 Build the requested interface using the target repository's existing framework,
 components, tokens, and icon library.

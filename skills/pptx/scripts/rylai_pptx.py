@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local PPTX utility for the Rylai Codex-Hermes skill."""
+"""Local PPTX utility for the Rylai Codex-Hermes-Claude skill."""
 
 from __future__ import annotations
 

@@ -1,14 +1,16 @@
 ---
 name: data-analyzer
-description: "Inspect a dataset, calculate trustworthy summaries, identify patterns and anomalies, and explain decision-relevant findings with explicit assumptions. Use when the user wants answers or insights from CSV, spreadsheet, JSON, database extracts, tables, or pasted data."
+description: Inspect datasets, calculate trustworthy summaries, identify patterns and anomalies, and explain decision-relevant findings with explicit assumptions.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "data"
+    category: data
+  claude:
+    category: data
 ---
 
 # Rylai Data Analyzer
@@ -48,7 +50,7 @@ Turn supplied data into supported conclusions. Prefer a smaller set of reliable 
    - Check that filters, joins, units, and date boundaries match the stated scope.
    - Trace each headline finding back to a reproducible calculation.
 
-## Output Contrac
+## Output Contract
 
 Return a compact report with:
 

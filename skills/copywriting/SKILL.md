@@ -1,14 +1,16 @@
 ---
 name: copywriting
-description: "Plan, draft, and review persuasive copy for landing pages, product pages, ads, email, headlines, offers, and calls to action. Use when the user wants clearer positioning, stronger conversion copy, message variants, or an evidence-based copy critique."
+description: Plan, draft, and review persuasive copy for landing pages, product pages, ads, email, headlines, offers, calls to action, positioning, and message variants.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  provenance: "clean-room-original"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
+  maintainer: Rylai
+  adapted_by: Rylai
+  provenance: clean-room-original
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
   hermes:
-    category: "content"
+    category: content
+  claude:
+    category: content
 ---
 
 # Copywriting

@@ -1,29 +1,32 @@
 ---
 name: video
-description: "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Runway,' 'Kling,' 'Pika,' 'video generation,' 'AI avatar,' 'talking head video,' 'programmatic video,' 'video template,' 'explainer video,' 'product demo video,' 'video pipeline,' or 'make me a video.' Use this for video creation, generation, and production workflows. For video content strategy and what to post, see social-content. For paid video ad creative, see ad-creative."
+description: Plan and produce video with available AI tools or programmatic frameworks. Use for video prompts, avatars, explainers, demos, templates, pipelines, and generation.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "adapted-open-source"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: adapted-open-source
   upstream:
-    url: "https://github.com/coreyhaines31/marketingskills"
-    revision: "7868cb9251fad80a73d26e488a5ad5f6c4a9f335"
-    license: "MIT"
+    url: https://github.com/coreyhaines31/marketingskills
+    revision: 7868cb9251fad80a73d26e488a5ad5f6c4a9f335
+    license: MIT
   hermes:
-    category: "media"
+    category: media
+  claude:
+    category: media
 ---
 
-> Rylai Codex-Hermes Edition | Maintained and adapted by Rylai
+> Rylai Codex-Hermes-Claude Edition | Maintained and adapted by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/video` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/video`.
 - Hermes: install under `~/.hermes/skills/video` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/video` or `<project>/.claude/skills/video`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 
 # Video
 
@@ -32,7 +35,11 @@ You are an expert video producer who helps create marketing videos using AI gene
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists (or `.agents/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If a project marketing context file exists, such as
+`.agents/product-marketing-context.md` or
+`.claude/product-marketing-context.md`, read it before asking questions. Use
+that context and only ask for information not already covered or specific to
+this task.
 
 Gather this context (ask if not provided):
 
@@ -47,7 +54,7 @@ Gather this context (ask if not provided):
 - Do you need generated footage? (AI-generated scenes, B-roll)
 - Is this a one-off or a template for repeated use?
 
-### 3. Technical Contex
+### 3. Technical Context
 - What's your tech stack? (Node.js, Python, etc.)
 - Do you have API keys for any video tools?
 - Budget constraints? (Some tools charge per minute of video)
@@ -77,11 +84,11 @@ Open-source, Apache 2.0, from HeyGen. Uses plain HTML/CSS/JS — no framework DS
 
 ```bash
 npm install hyperframes
-
+```
 
 **Key concept:** Each frame is an HTML document. Compose frames into a timeline, render to MP4.
 
-```typescrip
+```typescript
 import { render } from "hyperframes";
 
 await render({
@@ -94,7 +101,7 @@ await render({
   width: 1080,
   height: 1920, // 9:16 for vertical
 });
-
+```
 
 **Best for:** Product announcements, changelogs, data-driven reports, personalized outreach videos.
 
@@ -105,8 +112,8 @@ await render({
 Mature open-source framework. More powerful than Hyperframes but requires React knowledge.
 
 ```bash
-npx create-video@lates
-
+npx create-video@latest
+```
 
 **Key concept:** React components are frames. Props drive content. Render locally or via Remotion Lambda (AWS) for scale.
 
@@ -126,7 +133,7 @@ export const ProductDemo: React.FC<{ title: string; features: string[] }> = ({
     </AbsoluteFill>
   );
 };
-
+```
 
 **Best for:** Complex animations, interactive previews, large-scale batch rendering (Lambda).
 
@@ -172,7 +179,7 @@ cinematic color grading, 4K
 - Too vague ("a person working") — add specifics
 - Ignoring camera movement — specify dolly, pan, static
 - Forgetting style — "cinematic," "documentary," "commercial"
-- Requesting text in video — AI models struggle with readable tex
+- Requesting text in video — AI models struggle with readable text
 
 **For detailed prompting guides**: See [references/ai-video-prompting.md](references/ai-video-prompting.md)
 
@@ -272,7 +279,7 @@ Distribute: TikTok, Reels, Shorts, LinkedIn
 1. **Script** the problem → solution → CTA arc
 2. **Choose presenter** — AI avatar (HeyGen) or voiceover + visuals
 3. **Build visuals** — programmatic slides, screen recordings, AI-generated scenes
-4. **Add captions** — always, for accessibility and engagemen
+4. **Add captions** — always, for accessibility and engagement
 5. **Export** — landscape for YouTube/website, vertical for social
 
 ### Batch Social Clips
@@ -294,17 +301,17 @@ Agent writes script (from product context)
     ↓
 Hyperframes: Generate templated video (HTML → MP4)
     and/or
-HeyGen MCP: Generate avatar video from scrip
+HeyGen MCP: Generate avatar video from script
     and/or
 Veo/Runway API: Generate B-roll footage
     ↓
-Agent assembles final cu
+Agent assembles final cut
     ↓
 Output: Ready-to-publish video
 
 
 **What makes this agent-native:**
-- Hyperframes uses HTML — any coding agent can generate i
+- Hyperframes uses HTML — any coding agent can generate it
 - HeyGen MCP server — agents call it directly
 - Video model APIs — standard HTTP requests
 - No manual editing step required
@@ -344,7 +351,7 @@ Output: Ready-to-publish video
 
 ## Related Skills
 
-- **social-content**: For video content strategy, hooks, and what to pos
+- **social-content**: For video content strategy, hooks, and what to post
 - **ad-creative**: For paid video ad creative and iteration
 - **copywriting**: For video scripts and messaging
 - **marketing-psychology**: For hooks and persuasion in video

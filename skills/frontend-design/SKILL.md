@@ -1,23 +1,25 @@
 ---
 name: frontend-design
-description: "Design, implement, and verify production frontend interfaces for websites, applications, dashboards, components, and responsive web experiences. Use when Codex or Hermes must create or improve UI code while respecting the existing repository, accessibility, responsive behavior, interaction states, performance, and browser-based visual QA."
+description: Design, implement, and verify production frontend interfaces while respecting the existing repository, accessibility, responsive behavior, interaction, and visual QA.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "design"
+    category: design
+  claude:
+    category: design
 ---
 
 # Frontend Design
 
 This skill is a practical build workflow maintained and adapted by Rylai for
-Codex and Hermes. Its goal is a usable, coherent interface that survives real
+Codex, Hermes, and Claude. Its goal is a usable, coherent interface that survives real
 content, real interaction, and real viewport changes.
 
-## Runtime Contrac
+## Runtime Contract
 
 - Work inside the user's existing repository when one is provided.
 - Follow higher-priority project instructions and established design tokens.
@@ -111,8 +113,8 @@ to the component that owns it unless the repository has an established state
 pattern. Prefer existing helpers and native platform behavior over new
 abstractions.
 
-The primary path must be functional. Connect real data when the projec
-provides it; otherwise use explicit local fixtures that can be replaced withou
+The primary path must be functional. Connect real data when the project
+provides it; otherwise use explicit local fixtures that can be replaced without
 rewriting the component.
 
 ### 6. Complete Interaction States
@@ -176,7 +178,7 @@ Use automated checks as a supplement to keyboard and visual inspection.
 
 ### 10. Verify in a Browser
 
-Run the project's normal checks, start the appropriate local server, and inspec
+Run the project's normal checks, start the appropriate local server, and inspect
 the interface in a real browser.
 
 Verification should cover:
@@ -190,7 +192,7 @@ Verification should cover:
 7. screenshots for visual comparison and overlap detection;
 8. production build or equivalent repository check.
 
-When a visual reference exists, compare screenshots against it and correc
+When a visual reference exists, compare screenshots against it and correct
 hierarchy, spacing, scale, cropping, and alignment. Do not claim fidelity from
 code inspection alone.
 

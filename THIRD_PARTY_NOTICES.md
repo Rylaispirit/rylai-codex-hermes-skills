@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-This file records public GitHub sources used by the Rylai Codex-Hermes edition.
+This file records public GitHub sources used by the Rylai Codex-Hermes-Claude edition.
 Rylai maintains the adaptations; upstream authors retain ownership of their
 original work.
 
@@ -10,7 +10,7 @@ original work.
 - URL: https://github.com/EvoScientist/EvoSkills
 - Revision: `2e474118106f86c29082a6466b995ba59236614c`
 - License: Apache-2.0
-- Scope: academic presentation workflow adapted for portable Codex-Hermes use.
+- Scope: academic presentation workflow adapted for portable Codex-Hermes-Claude use.
 
 ## image and video
 
@@ -18,7 +18,7 @@ original work.
 - URL: https://github.com/coreyhaines31/marketingskills
 - Revision: `7868cb9251fad80a73d26e488a5ad5f6c4a9f335`
 - License: MIT
-- Scope: marketing image and video production guidance adapted for Codex-Hermes.
+- Scope: marketing image and video production guidance adapted for Codex-Hermes-Claude.
 
 ## natural-writing
 
@@ -26,7 +26,7 @@ original work.
 - URL: https://github.com/blader/humanizer
 - Revision: `523374dee72d67c7b2b5f858ea0094ffda49c3ac`
 - License: MIT
-- Scope: human-sounding prose guidance adapted for Codex-Hermes.
+- Scope: human-sounding prose guidance adapted for Codex-Hermes-Claude.
 
 ## netlify-deploy
 
@@ -50,7 +50,7 @@ original work.
 - URL: https://github.com/yusufkaraaslan/Skill_Seekers
 - Revision: `f3972efa33fa79634b96936acf1fac321cdcf7c1`
 - License: MIT
-- Scope: source-to-skill workflow adapted for Codex and Hermes.
+- Scope: source-to-skill workflow adapted for Codex, Hermes, and Claude.
 
 ## Runtime Dependencies
 

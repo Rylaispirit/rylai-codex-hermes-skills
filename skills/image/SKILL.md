@@ -1,29 +1,32 @@
 ---
 name: image
-description: "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'Ideogram,' 'Gemini image,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video."
+description: Create or optimize marketing images, social graphics, product mockups, banners, cover art, listing visuals, brand assets, image prompts, WebP files, and OG images.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "adapted-open-source"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: adapted-open-source
   upstream:
-    url: "https://github.com/coreyhaines31/marketingskills"
-    revision: "7868cb9251fad80a73d26e488a5ad5f6c4a9f335"
-    license: "MIT"
+    url: https://github.com/coreyhaines31/marketingskills
+    revision: 7868cb9251fad80a73d26e488a5ad5f6c4a9f335
+    license: MIT
   hermes:
-    category: "media"
+    category: media
+  claude:
+    category: media
 ---
 
-> Rylai Codex-Hermes Edition | Maintained and adapted by Rylai
+> Rylai Codex-Hermes-Claude Edition | Maintained and adapted by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/image` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/image`.
 - Hermes: install under `~/.hermes/skills/image` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/image` or `<project>/.claude/skills/image`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 
 # Image
 
@@ -32,7 +35,11 @@ You are an expert visual content producer who helps create marketing images usin
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists (or `.agents/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If a project marketing context file exists, such as
+`.agents/product-marketing-context.md` or
+`.claude/product-marketing-context.md`, read it before asking questions. Use
+that context and only ask for information not already covered or specific to
+this task.
 
 Gather this context (ask if not provided):
 
@@ -46,7 +53,7 @@ Gather this context (ask if not provided):
 - Do you need photorealistic or illustrative style?
 - Is this a one-off or a template for repeated use?
 
-### 3. Technical Contex
+### 3. Technical Context
 - Do you have API keys for any image tools? (Gemini, Replicate/Flux, Ideogram)
 - Budget constraints? (Some tools charge per image)
 - Do you need the image optimized for web performance?
@@ -228,13 +235,13 @@ Banners for profiles, directory listings, and marketplace pages. Often the first
 - **Keep text minimal** — banners are seen at small sizes on mobile
 - **Center critical content** — edges get cropped differently per device
 - **Show the product** — real UI screenshots outperform abstract graphics on directory listings
-- **Match your brand** — use consistent colors, fonts, logo placemen
-- **Update seasonally** — stale banners signal an inactive produc
+- **Match your brand** — use consistent colors, fonts, logo placement
+- **Update seasonally** — stale banners signal an inactive product
 
 **Workflow:**
 1. Pick the platform(s) and note exact dimensions
 2. For directories (Product Hunt, G2): use real product screenshots with light annotation
-3. For profiles (LinkedIn, Twitter): use brand colors + tagline + optional product sho
+3. For profiles (LinkedIn, Twitter): use brand colors + tagline + optional product shot
 4. Generate with Canva/Figma templates or Ideogram (if text-heavy)
 5. Test at actual display size — zoom out to check readability
 
@@ -266,7 +273,7 @@ Every image on your site affects page speed, which affects SEO and conversions.
 | **PNG** | Transparency, screenshots | Lossless | Universal |
 | **SVG** | Logos, icons, illustrations | Vector (scales) | Universal |
 
-### Optimization Checklis
+### Optimization Checklist
 
 - [ ] **Serve WebP** with JPEG/PNG fallback (`<picture>` element or CDN auto-format)
 - [ ] **Resize to display size** — don't serve 4000px images in 800px containers
@@ -290,7 +297,7 @@ jpegoptim --max=80 --strip-all *.jpg
 
 # Check image sizes on a page
 curl -s https://project.test | grep -oP 'src="[^"]+\.(jpg|png|webp)"' | head -20
-
+```
 
 ---
 
@@ -306,7 +313,7 @@ The image that appears when your URL is shared on social media, Slack, Discord, 
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://project.test/og/page-name.jpg" />
-
+```
 
 ### Dynamic OG Images
 
@@ -326,8 +333,8 @@ Generate OG images programmatically for pages with dynamic content (blog posts, 
 2. **Skipping image optimization** — unoptimized images are the #1 page speed killer
 3. **No OG image** — shared links look broken without a preview image
 4. **Wrong aspect ratio** — always check platform specs before generating
-5. **Text-heavy images without Ideogram** — most AI models butcher text; use Ideogram or add text in pos
-6. **Generating without style direction** — "photorealistic," "flat illustration," "3D render" drastically changes outpu
+5. **Text-heavy images without Ideogram** — most AI models butcher text; use Ideogram or add text in post
+6. **Generating without style direction** — "photorealistic," "flat illustration," "3D render" drastically changes output
 7. **Inconsistent brand visuals** — use Flux multi-reference or design templates for consistency
 8. **Huge images on landing pages** — compress, resize, lazy load
 

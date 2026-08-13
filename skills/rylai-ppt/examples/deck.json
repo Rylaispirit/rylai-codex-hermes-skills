@@ -1,11 +1,11 @@
 {
   "title": "Rylai Skill Kit",
-  "subtitle": "A portable workflow for Codex and Hermes",
+  "subtitle": "A portable workflow for Codex, Hermes, and Claude",
   "slides": [
     {
       "title": "Built for practical agent work",
       "bullets": [
-        "Portable instructions for Codex and Hermes",
+        "Portable instructions for Codex, Hermes, and Claude",
         "Editable PowerPoint text and shapes",
         "Local generation with explicit output paths"
       ]

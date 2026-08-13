@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check domain registration signals through RDAP.
 
-Original utility maintained by Rylai for Codex and Hermes skill workflows.
+Original utility maintained by Rylai for Codex, Hermes, and Claude skill workflows.
 """
 
 from __future__ import annotations

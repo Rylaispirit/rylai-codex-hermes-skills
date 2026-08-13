@@ -1,25 +1,28 @@
 ---
 name: video-generation
-description: "Generate videos through the native or configured video backend in Codex or Hermes using structured prompts, explicit output paths, and verified delivery."
+description: Generate videos through an available or configured video backend using structured prompts, explicit output paths, capability checks, and verified delivery.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "media"
+    category: media
+  claude:
+    category: media
 ---
 
-> Rylai Codex-Hermes Edition | Original portable workflow by Rylai
+> Rylai Codex-Hermes-Claude Edition | Original portable workflow by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/video-generation` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/video-generation`.
 - Hermes: install under `~/.hermes/skills/video-generation` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/video-generation` or `<project>/.claude/skills/video-generation`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 - Upstream package status: `adapted-core`. The main workflow was rewritten to avoid missing legacy resources; advanced upstream features may remain unavailable.
 
 # Portable Video Generation
@@ -28,8 +31,8 @@ Generate a video only through a backend that is available and configured in the 
 
 ## Runtime Routes
 
-- Codex: use the installed Sora skill or an explicitly configured video provider.
-- Hermes: use `video_generate` when the video toolset and provider are enabled.
+- Use a video-generation tool, skill, MCP server, or API configured in the active runtime.
+- Do not assume a runtime-specific command exists; verify the provider, credentials, quota, and output controls before submission.
 
 ## Workflow
 

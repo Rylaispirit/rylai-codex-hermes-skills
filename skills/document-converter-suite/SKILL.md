@@ -1,14 +1,16 @@
 ---
 name: document-converter-suite
-description: Convert local PDF, Office, Markdown, HTML, text, CSV, TSV, and JSON files with dependency-aware fallbacks; batch-convert folders; extract tables; fill templates; and perform focused PDF page operations. Use when Codex or Hermes needs editable document output and can accept best-effort semantic conversion rather than guaranteed pixel-perfect reproduction.
+description: Convert local PDF, Office, Markdown, HTML, text, CSV, TSV, and JSON files; batch-convert folders, extract tables, fill templates, and edit PDF pages.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "documents"
+    category: documents
+  claude:
+    category: documents
 ---
 
 # Document Converter Suite
@@ -21,7 +23,7 @@ Use the bundled scripts for deterministic local-file work. Keep source files unc
 
 ```powershell
 python scripts/rylai_convert.py doctor
-
+```
 
 The report distinguishes required Python support from optional routes provided by MarkItDown, Pandoc, LibreOffice, `pypdf`, `python-docx`, `python-pptx`, `openpyxl`, and `pdfplumber`.
 
@@ -31,7 +33,7 @@ The report distinguishes required Python support from optional routes provided b
 python scripts/rylai_convert.py convert input.docx output.md
 python scripts/rylai_convert.py convert notes.md notes.docx
 python scripts/rylai_convert.py convert workbook.xlsx workbook.pdf
-
+```
 
 Add `--overwrite` only after checking that replacing the destination is intended.
 
@@ -40,7 +42,7 @@ Add `--overwrite` only after checking that replacing the destination is intended
 ```powershell
 python scripts/rylai_convert.py batch source output --to md --recursive
 python scripts/rylai_convert.py batch source output --to pdf --include docx --include pptx
-
+```
 
 The batch command preserves relative paths and reports every failed file.
 
@@ -54,21 +56,21 @@ python scripts/rylai_pdf_pages.py extract report.pdf excerpt.pdf --pages 1,3-5
 python scripts/rylai_pdf_pages.py merge combined.pdf part-a.pdf part-b.pdf
 python scripts/rylai_pdf_pages.py split report.pdf split-pages
 python scripts/rylai_pdf_pages.py rotate report.pdf rotated.pdf --pages all --degrees 90
-
+```
 
 Table extraction:
 
 ```powershell
 python scripts/rylai_tables.py data.xlsx table.csv --sheet Summary
 python scripts/rylai_tables.py report.pdf table.md --table 2
-
+```
 
 Template filling:
 
 ```powershell
 python scripts/rylai_template_fill.py template.docx filled.docx --values values.json
 python scripts/rylai_template_fill.py template.md filled.md --set project=Rylai --set status=Ready
-
+```
 
 Read `references/routes.md` when choosing between conversion engines or explaining limitations.
 

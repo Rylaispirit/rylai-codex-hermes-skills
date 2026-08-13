@@ -1,19 +1,21 @@
 ---
 name: xlsx
-description: Create, inspect, edit, and verify Excel .xlsx workbooks with openpyxl. Use when Codex or Hermes must turn CSV or TSV data into a styled workbook, update cells or formulas in an existing workbook, inspect sheets and formula errors, or optionally recalculate and render a workbook with local LibreOffice.
+description: Create, inspect, edit, and verify Excel XLSX workbooks with openpyxl, including CSV import, formulas, styling, error checks, and optional LibreOffice rendering.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "data"
+    category: data
+  claude:
+    category: data
 ---
 
 # Rylai XLSX
 
-This is an original Rylai Codex-Hermes workflow. Use the open-source
+This is an original Rylai Codex-Hermes-Claude workflow. Use the open-source
 `openpyxl` package for workbook operations and LibreOffice only for optional
 formula recalculation or PDF rendering.
 
@@ -33,7 +35,7 @@ formula recalculation or PDF rendering.
    a change.
 3. Save to a new output path instead of overwriting the source.
 4. Reopen the saved workbook and inspect formula and error counts.
-5. When formula results must be refreshed, use LibreOffice recalculation if i
+5. When formula results must be refreshed, use LibreOffice recalculation if it
    is available.
 
 ## Bundled CLI
@@ -43,13 +45,13 @@ Create a styled workbook from CSV or TSV:
 ```bash
 python scripts/xlsx_tool.py create input.csv output.xlsx --sheet Data
 python scripts/xlsx_tool.py create input.tsv output.xlsx --delimiter tab
-
+```
 
 Inspect workbook structure, formulas, and visible spreadsheet errors:
 
 ```bash
 python scripts/xlsx_tool.py inspect output.xlsx
-
+```
 
 Update cells or formulas while keeping the source unchanged:
 
@@ -57,7 +59,7 @@ Update cells or formulas while keeping the source unchanged:
 python scripts/xlsx_tool.py set input.xlsx output.xlsx \
   --cell "Summary!B2=1250" \
   --cell "Summary!B3==SUM(Data!B2:B20)"
-
+```
 
 The first `=` separates the cell address from its value. A formula therefore
 uses a second `=`.
@@ -66,13 +68,13 @@ Recalculate formulas through a LibreOffice save round trip:
 
 ```bash
 python scripts/xlsx_tool.py recalc input.xlsx recalculated.xlsx
-
+```
 
 Render workbook sheets to PDF:
 
 ```bash
 python scripts/xlsx_tool.py render input.xlsx rendered
-
+```
 
 ## Quality Rules
 

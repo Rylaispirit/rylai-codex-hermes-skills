@@ -1,21 +1,23 @@
 ---
 name: academic-writing-style
-description: "Plan, draft, revise, and audit academic writing for clear argumentation, disciplined evidence use, coherent thesis structure, and consistent citation practice. Use for theses, dissertations, research papers, literature reviews, methods sections, results, discussions, and academic proofreading."
+description: Plan, draft, revise, and audit theses, papers, literature reviews, methods, results, and discussions for argument, evidence, structure, citations, and style.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "academic"
+    category: academic
+  claude:
+    category: academic
 ---
 
 # Rylai Academic Writing
 
 Produce rigorous academic prose without inventing evidence, citations, findings, or institutional requirements.
 
-## Start With The Writing Contrac
+## Start With The Writing Contract
 
 Before drafting or revising, identify:
 
@@ -79,7 +81,7 @@ If a required source or rule is unavailable, state the gap. Do not silently gues
 - Use cautious language only where uncertainty exists; do not weaken well-supported statements by habit.
 - Never create a DOI, page number, author, title, statistic, or quotation that was not verified.
 
-## Review Outpu
+## Review Output
 
 For a review request, return:
 

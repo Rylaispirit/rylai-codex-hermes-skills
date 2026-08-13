@@ -14,7 +14,7 @@ subject-relevant visual is optional.
 **Check:** the title is readable at projection distance and does not compete
 with decorative material.
 
-## Problem in Contex
+## Problem in Context
 
 **Purpose:** show the concrete consequence of the problem.
 
@@ -89,7 +89,7 @@ interpretation.
 
 **Check:** symbols are defined before reuse and notation matches the source.
 
-## Primary Resul
+## Primary Result
 
 **Purpose:** support one central finding.
 

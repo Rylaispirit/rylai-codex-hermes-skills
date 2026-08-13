@@ -1,19 +1,21 @@
 ---
 name: pptx
-description: Create, inspect, extract, edit, and render PowerPoint presentations with python-pptx and optional LibreOffice. Use whenever Codex or Hermes must read, produce, revise, or verify a .pptx deck.
+description: Create, inspect, extract, edit, render, and verify PowerPoint presentations with python-pptx and optional LibreOffice.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "presentations"
+    category: presentations
+  claude:
+    category: presentations
 ---
 
 # Rylai PPTX
 
-Original Codex-Hermes skill by Rylai.
+Original Codex-Hermes-Claude skill by Rylai.
 
 Build presentations from local content with `python-pptx`. Use LibreOffice only for optional PDF
 rendering. Do not hotlink images, fetch remote templates, or overwrite the source deck unless the
@@ -25,13 +27,13 @@ Probe before installing:
 
 ```bash
 python -c "import pptx; print(pptx.__version__)"
-
+```
 
 Install only when missing:
 
 ```bash
 python -m pip install python-pptx
-
+```
 
 Resolve `scripts/rylai_pptx.py` relative to this skill directory.
 
@@ -48,7 +50,7 @@ Resolve `scripts/rylai_pptx.py` relative to this skill directory.
 For an existing deck, write a task-specific `python-pptx` edit script in the workspace. Keep the
 original file, preserve untouched slides, and save the revision to a new path.
 
-## JSON Build Forma
+## JSON Build Format
 
 ```json
 {
@@ -66,7 +68,7 @@ original file, preserve untouched slides, and save the revision to a new path.
     }
   ]
 }
-
+```
 
 The `image` field is optional and must point to a local file. Relative image paths are resolved
 from the JSON file location.
@@ -77,25 +79,25 @@ Build:
 
 ```bash
 python scripts/rylai_pptx.py build deck.json output.pptx
-
+```
 
 Inspect structure:
 
 ```bash
 python scripts/rylai_pptx.py inspect output.pptx
-
+```
 
 Extract text as Markdown:
 
 ```bash
 python scripts/rylai_pptx.py extract output.pptx output.md
-
+```
 
 Render to PDF with LibreOffice:
 
 ```bash
 python scripts/rylai_pptx.py render output.pptx rendered
-
+```
 
 Use `--force` only when replacing an existing output is intended.
 

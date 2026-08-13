@@ -1,10 +1,10 @@
 # Model-Neutral Academic Editing Prompts
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 ## Full Pass
 
-```tex
+```text
 Edit the passage for academic clarity and precision.
 
 Constraints:
@@ -17,31 +17,31 @@ Return:
 1. Revised passage.
 2. A short list of substantive wording changes.
 3. Any claim that needs evidence or clarification.
-
+```
 
 ## Concision Pass
 
-```tex
+```text
 Reduce the passage by approximately [target percent] without removing evidence,
 qualifications, definitions, or logical transitions. List any content that could
 not be removed safely.
-
+```
 
 ## Coherence Pass
 
-```tex
+```text
 Check whether each sentence has one clear role and whether paragraph order
 supports the argument. Propose the smallest reordering needed. Do not rewrite
 technical content unless clarity requires it.
-
+```
 
 ## Claim Calibration Pass
 
-```tex
+```text
 Mark claims as descriptive, correlational, causal, comparative, or speculative.
 Revise wording so claim strength matches the supplied evidence. Do not add
 citations or results.
-
+```
 
 ## Verification
 

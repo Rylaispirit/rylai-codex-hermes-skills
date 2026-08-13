@@ -1,19 +1,21 @@
 ---
 name: docx
-description: Create, inspect, edit, and verify Microsoft Word .docx documents with python-docx. Use when Codex or Hermes must produce a Word report, convert simple Markdown into DOCX, replace text in an existing document, inspect document structure and metadata, or render a DOCX to PDF with an optional local LibreOffice installation.
+description: Create, inspect, edit, and verify Word DOCX files with python-docx, including Markdown conversion, text replacement, metadata inspection, and optional PDF render.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "documents"
+    category: documents
+  claude:
+    category: documents
 ---
 
 # Rylai DOCX
 
-This is an original Rylai Codex-Hermes workflow. Use the open-source
+This is an original Rylai Codex-Hermes-Claude workflow. Use the open-source
 `python-docx` package for document work and LibreOffice only when local
 rendering is useful.
 
@@ -41,7 +43,7 @@ Create a styled DOCX from simple Markdown:
 
 ```bash
 python scripts/docx_tool.py create input.md output.docx --title "Report"
-
+```
 
 Supported Markdown includes headings, paragraphs, bullet lists, numbered
 lists, block quotes, simple emphasis, inline code, and pipe tables.
@@ -50,8 +52,8 @@ Inspect structure and metadata:
 
 ```bash
 python scripts/docx_tool.py inspect output.docx
-python scripts/docx_tool.py inspect output.docx --tex
-
+python scripts/docx_tool.py inspect output.docx --text
+```
 
 Replace text while keeping the source unchanged:
 
@@ -59,13 +61,13 @@ Replace text while keeping the source unchanged:
 python scripts/docx_tool.py replace input.docx output.docx \
   --set "{{client}}=Rylai Studio" \
   --set "{{date}}=2026-08-09"
-
+```
 
 Render to PDF when LibreOffice is available:
 
 ```bash
 python scripts/docx_tool.py render output.docx rendered
-
+```
 
 ## Quality Rules
 

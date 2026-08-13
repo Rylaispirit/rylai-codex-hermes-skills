@@ -1,6 +1,6 @@
 # Research Writing
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 Define the research question, evidence standard, source boundary, and audience.
 Separate observed facts, source claims, analysis, and inference. Maintain a

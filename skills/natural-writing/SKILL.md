@@ -1,29 +1,32 @@
 ---
 name: natural-writing
-description: "Write like a human, not a language model. Use this skill whenever Codex or Hermes is producing prose — emails, reports, essays, articles, blog posts, marketing copy, documentation, creative writing, social media posts, bios, product descriptions, or any other text meant to be read by people. Also trigger when the user asks Codex or Hermes to \"sound more natural,\" \"less AI,\" \"more human,\" or complains that output \"sounds like ChatGPT.\" This skill addresses the specific, documented patterns that make LLM writing detectable and generic. If writing is involved, read this skill."
+description: Make prose sound natural and human while preserving meaning, voice, facts, and format. Use for writing or requests to reduce generic AI-sounding patterns.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "adapted-open-source"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: adapted-open-source
   upstream:
-    url: "https://github.com/blader/humanizer"
-    revision: "523374dee72d67c7b2b5f858ea0094ffda49c3ac"
-    license: "MIT"
+    url: https://github.com/blader/humanizer
+    revision: 523374dee72d67c7b2b5f858ea0094ffda49c3ac
+    license: MIT
   hermes:
-    category: "content"
+    category: content
+  claude:
+    category: content
 ---
 
-> Rylai Codex-Hermes Edition | Maintained and adapted by Rylai
+> Rylai Codex-Hermes-Claude Edition | Maintained and adapted by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/natural-writing` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/natural-writing`.
 - Hermes: install under `~/.hermes/skills/natural-writing` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/natural-writing` or `<project>/.claude/skills/natural-writing`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 
 # Natural Writing
 
@@ -112,11 +115,11 @@ underscores, realm, foster, leverage (verb), pivotal, comprehensive,
 intricate, commendable, noteworthy, invaluable, meticulous, innovative,
 groundbreaking, cutting-edge, revolutionary, game-changer, holistic,
 synergy, robust, seamless, dynamic, vibrant, bustling, nestled, renowned,
-esteemed, testamen
+esteemed, testament
 
 **The principle:** Prefer the shorter, plainer, more common word. "Shows"
 over "underscores." "Detailed" over "meticulous." "Useful" over
-"invaluable." "Complex" over "multifaceted." Often the fancy word can jus
+"invaluable." "Complex" over "multifaceted." Often the fancy word can just
 be deleted — the sentence is stronger without it.
 
 ---
@@ -221,7 +224,7 @@ use commas, parentheses, and colons for variety.
 **AI pattern:** "The temple — a counter-symbol of unity — stands at the
 border, emphasizing togetherness — and transcendent faith."
 
-**The fix:** Use em dashes sparingly. One per paragraph is plenty. For mos
+**The fix:** Use em dashes sparingly. One per paragraph is plenty. For most
 parenthetical asides, commas or actual parentheses work fine. For
 explanations, try a colon.
 
@@ -276,7 +279,7 @@ culturally or commercially significant. They slip into brochure language:
 glimpse," "a diverse range of experiences against the backdrop of stunning
 natural beauty."
 
-**The fix:** Describe, don't sell. State what exists, what happened, wha
+**The fix:** Describe, don't sell. State what exists, what happened, what
 something does. Let the reader form their own impression. If you're writing
 actual marketing copy, be specific about benefits rather than stacking
 adjectives.
@@ -308,7 +311,7 @@ Beyond specific patterns, AI text has a recognizable rhythm: medium-length
 declarative sentences, each structured similarly, rarely interrupted by
 fragments, questions, very short sentences, or very long ones. Human prose
 breathes. It varies. Some sentences are four words. Others unspool across
-a paragraph, piling clause upon clause, picking up momentum like a freigh
+a paragraph, piling clause upon clause, picking up momentum like a freight
 train before finally, at the end, making their point.
 
 Mix it up. Start some sentences with conjunctions. Use fragments for
@@ -323,9 +326,9 @@ Before finalizing any piece of writing, scan for these clusters:
 
 1. **Significance inflation** — Can you delete "pivotal," "transformative,"
    "broader," or "legacy" without losing meaning? Do it.
-2. **Trailing analysis** — Do sentences end with "-ing" phrases tha
+2. **Trailing analysis** — Do sentences end with "-ing" phrases that
    restate the obvious? Cut them.
-3. **AI vocabulary clusters** — Three or more words from the AI vocab lis
+3. **AI vocabulary clusters** — Three or more words from the AI vocab list
    in one paragraph? Rewrite.
 4. **Copula avoidance** — Count your uses of "is" and "are." If they're
    suspiciously low, you're probably over-substituting.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small local PDF utility for the Rylai Codex-Hermes skill."""
+"""Small local PDF utility for the Rylai Codex-Hermes-Claude skill."""
 
 from __future__ import annotations
 

@@ -1,25 +1,28 @@
 ---
 name: deep-research
-description: "Conduct systematic source-backed research with scoped questions, triangulation, contradiction handling, and citation-ready synthesis."
+description: Conduct systematic source-backed research with scoped questions, triangulation, contradiction handling, and citation-ready synthesis.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "research"
+    category: research
+  claude:
+    category: research
 ---
 
-> Rylai Codex-Hermes Edition | Original portable workflow by Rylai
+> Rylai Codex-Hermes-Claude Edition | Original portable workflow by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/deep-research` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/deep-research`.
 - Hermes: install under `~/.hermes/skills/deep-research` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/deep-research` or `<project>/.claude/skills/deep-research`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 
 # Portable Deep Research
 

@@ -1,19 +1,21 @@
 ---
 name: pdf
-description: Create, inspect, extract, merge, split, rotate, and render PDF files with local open-source tools. Use whenever Codex or Hermes must read, produce, modify, or visually verify a PDF.
+description: Create, inspect, extract, merge, split, rotate, and render PDF files with local open-source tools, including structural and visual verification.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "documents"
+    category: documents
+  claude:
+    category: documents
 ---
 
 # Rylai PDF
 
-Original Codex-Hermes skill by Rylai.
+Original Codex-Hermes-Claude skill by Rylai.
 
 Use local files and deterministic tools. Preserve the source document unless the user explicitly
 requests an in-place replacement. Never invent passwords, embed credentials, or upload documents
@@ -33,13 +35,13 @@ Probe before installing:
 ```bash
 python -c "import pypdf; print(pypdf.__version__)"
 python -c "import pdfplumber; print(pdfplumber.__version__)"
-
+```
 
 Install only missing Python packages:
 
 ```bash
 python -m pip install pypdf pdfplumber pypdfium2
-
+```
 
 Resolve `scripts/rylai_pdf.py` relative to this skill directory.
 
@@ -61,37 +63,37 @@ Inspect:
 
 ```bash
 python scripts/rylai_pdf.py info input.pdf
-
+```
 
 Extract selected pages:
 
 ```bash
 python scripts/rylai_pdf.py extract input.pdf output.txt --pages 1-3,7
-
+```
 
 Merge:
 
 ```bash
 python scripts/rylai_pdf.py merge output.pdf first.pdf second.pdf
-
+```
 
 Split selected pages into individual files:
 
 ```bash
 python scripts/rylai_pdf.py split input.pdf output-pages --pages 2-5
-
+```
 
 Rotate selected pages clockwise:
 
 ```bash
 python scripts/rylai_pdf.py rotate input.pdf rotated.pdf 90 --pages 1,3
-
+```
 
 Render with local PDFium or Poppler:
 
 ```bash
 python scripts/rylai_pdf.py render input.pdf rendered-pages --dpi 144
-
+```
 
 Add `--password` only when the user supplied the password for that document.
 

@@ -1,6 +1,6 @@
 # Blog Writing
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 1. Define the reader, question, and useful outcome.
 2. Choose one angle rather than covering the whole topic.

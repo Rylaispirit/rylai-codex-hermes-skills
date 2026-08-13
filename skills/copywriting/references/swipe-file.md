@@ -1,60 +1,60 @@
 # Copy Drafting Patterns
 
-These are neutral structures created for the Rylai Codex-Hermes workflow.
+These are neutral structures created for the Rylai Codex-Hermes-Claude workflow.
 Replace every bracketed field with verified, audience-specific information.
 
 ## Headline Directions
 
-- Outcome: `[Audience] can [desired result] with [relevant constraint removed]
-- Problem: `A clearer way to handle [recognized problem]
-- Mechanism: `[Result] through [distinct method]
-- Proof: `[Verified evidence] behind [specific outcome]
-- Comparison: `Choose between [option A] and [option B] based on [real criterion]
+- Outcome: `[Audience] can [desired result] with [relevant constraint removed]`
+- Problem: `A clearer way to handle [recognized problem]`
+- Mechanism: `[Result] through [distinct method]`
+- Proof: `[Verified evidence] behind [specific outcome]`
+- Comparison: `Choose between [option A] and [option B] based on [real criterion]`
 
-## Value Statemen
+## Value Statement
 
-```tex
+```text
 For [audience] who need [job or outcome], [offer] provides [main value]
 through [mechanism]. It is a fit when [qualification or boundary].
-
+```
 
 ## Hero Block
 
-```tex
+```text
 Headline: [primary value]
 Support: [audience + mechanism + important qualification]
 Proof: [verified result, demonstration, or trust signal]
 CTA: [specific next action]
 Risk reducer: [accurate commitment, privacy, cancellation, or compatibility note]
-
+```
 
 ## Benefit Block
 
-```tex
+```text
 [Outcome-oriented heading]
 [One sentence explaining how the offer creates that outcome.]
 [Evidence or product detail that supports the explanation.]
-
+```
 
 ## Objection Block
 
-```tex
+```text
 Concern: [what may stop the reader]
 Answer: [direct response]
 Evidence: [policy, demonstration, comparison, or verified result]
 Boundary: [what the offer does not promise]
-
+```
 
 ## Email Block
 
-```tex
+```text
 Subject: [relevant reason to open]
 Preview: [context that completes the subject]
 Opening: [reader situation]
 Value: [specific useful outcome]
 Proof: [verified support]
 CTA: [one next action]
-
+```
 
 ## Variant Planning
 

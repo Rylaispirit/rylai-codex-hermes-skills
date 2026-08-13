@@ -1,6 +1,6 @@
 # App Overview
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 - Product:
 - Primary users:

@@ -1,20 +1,21 @@
 ---
 name: academic-pptx
-description: "Plan, build, render, and verify academic presentation decks for research talks, conference papers, seminars, thesis defenses, lab meetings, grant reviews, and evidence-based lectures. Use when Codex or Hermes must turn academic material into a clear slide argument and produce or revise a PPTX with citations, accessible visuals, speaker-ready pacing, and visual QA."
+description: Plan, build, render, and verify academic presentation decks with citations, accessible visuals, clear argument flow, speaker-ready pacing, and visual QA.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "presentations"
+    category: presentations
+  claude:
+    category: presentations
 ---
 
 # Academic PPTX
 
-This clean-room workflow is maintained and adapted by Rylai for Codex and
-Hermes. It covers the reasoning, production, rendering, and verification needed
+This clean-room workflow is maintained and adapted by Rylai for Codex, Hermes, and Claude. It covers the reasoning, production, rendering, and verification needed
 for an academic deck. It does not depend on a private template or closed helper.
 
 Read these resources when needed:
@@ -23,7 +24,7 @@ Read these resources when needed:
   citations, and speaker-note decisions.
 - [slide_patterns.md](slide_patterns.md) for reusable academic slide structures.
 
-## Runtime Contrac
+## Runtime Contract
 
 - Respect the user's institution template, existing deck, and repository.
 - Use standard presentation tooling available in the environment, such as
@@ -61,7 +62,7 @@ existing slides. Build an evidence ledger with:
 Mark missing information explicitly. Do not fill gaps with plausible-sounding
 content.
 
-### 2. Set the Talk Contrac
+### 2. Set the Talk Contract
 
 Determine:
 
@@ -145,10 +146,10 @@ Prefer direct labels and annotations over legends that require eye travel.
 Preserve uncertainty, units, sample sizes, and baseline definitions. Put sources
 on the slide where borrowed evidence appears.
 
-Use speaker notes for delivery cues, transitions, caveats, and detail tha
+Use speaker notes for delivery cues, transitions, caveats, and detail that
 should not crowd the projected slide.
 
-### 8. Render and Inspec
+### 8. Render and Inspect
 
 Open or render the generated file using an independent presentation engine when
 available. Inspect every slide as an image or in slide-sorter view.

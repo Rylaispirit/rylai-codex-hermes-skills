@@ -1,17 +1,19 @@
 ---
 name: rylai-ppt
-description: Create editable PowerPoint decks from a local JSON specification with an original Rylai visual system. Use for presentations, pitch decks, reports, training decks, roadmaps, comparisons, metrics, and timelines when Codex or Hermes can run Python.
+description: Create editable PowerPoint decks from a local JSON specification using Rylai's visual system, python-pptx, deterministic slide types, and optional rendering.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.1.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "presentations"
+    category: presentations
+  claude:
+    category: presentations
 ---
 
-# Rylai PP
+# Rylai PPT
 
 Use the bundled Python workflow to create a clean, editable `.pptx`. The
 renderer is an original Rylai implementation built on `python-pptx`. It uses
@@ -21,7 +23,7 @@ hosted assets.
 ## Requirements
 
 - Python 3
-- `python-pptx
+- `python-pptx`
 - Optional LibreOffice for rendering to PDF
 
 ## Workflow
@@ -33,21 +35,21 @@ hosted assets.
 
 ```bash
 python <skill-dir>/scripts/build_deck.py build <deck.json> <output.pptx>
-
+```
 
 5. Build the presentation:
 
 ```bash
 python <skill-dir>/scripts/build_deck.py inspect <output.pptx>
-
+```
 
 6. Render the result when LibreOffice is available:
 
 ```bash
 python <skill-dir>/scripts/build_deck.py render <output.pptx> <render-dir>
+```
 
-
-7. Check clipping, contrast, reading order, repeated wording, and slide coun
+7. Check clipping, contrast, reading order, repeated wording, and slide count
    before delivery.
 
 ## Slide Types
@@ -74,9 +76,9 @@ Read `references/deck-spec.md` when field-level constraints are needed. Unknown 
 
 ## Runtime Notes
 
-- Codex and Hermes both execute the same Node scripts.
+- Codex, Hermes, and Claude execute the same bundled Python scripts.
 - Resolve all bundled paths from this skill directory.
 - Write generated decks to the user's requested workspace, not inside the installed skill.
 - Report the final path and the number and types of slides created.
 
-Authored by Rylai for Codex and Hermes.
+Authored by Rylai for Codex, Hermes, and Claude.

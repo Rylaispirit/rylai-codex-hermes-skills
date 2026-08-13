@@ -1,25 +1,28 @@
 ---
 name: finance-news-analysis
-description: "Analyze current financial news for sentiment, market or sector impact, affected instruments, uncertainty, and risk scenarios without giving trade advice."
+description: Analyze current financial news for sentiment, market or sector impact, affected instruments, uncertainty, and risk scenarios without giving trade advice.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "1.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "finance"
+    category: finance
+  claude:
+    category: finance
 ---
 
-> Rylai Codex-Hermes Edition | Original portable workflow by Rylai
+> Rylai Codex-Hermes-Claude Edition | Original portable workflow by Rylai
 
 ## Runtime Compatibility
 
-- Codex: install under `~/.agents/skills/finance-news-analysis` and use `agents/openai.yaml` for UI metadata.
+- Codex: install under `~/.agents/skills/finance-news-analysis`.
 - Hermes: install under `~/.hermes/skills/finance-news-analysis` or expose the bundle through `skills.external_dirs`.
-- Resolve bundled files relative to this skill directory; do not depend on paths from another runtime.
-- Map capabilities to the current runtime: Codex image generation uses `image_gen`; Hermes uses `image_generate`.
-- Verify binaries, packages, credentials, network access, and tool availability before execution.
+- Claude Code: install under `~/.claude/skills/finance-news-analysis` or `<project>/.claude/skills/finance-news-analysis`.
+- Claude.ai and Cowork: upload and enable the matching per-skill ZIP.
+- Resolve bundled files relative to this skill directory; do not depend on paths from another machine.
+- Check tools, packages, credentials, network access, and runtime capabilities before execution.
 - Upstream package status: `adapted-core`. The main workflow was rewritten to avoid missing legacy resources; advanced upstream features may remain unavailable.
 
 # Portable Finance News Analysis
@@ -36,7 +39,7 @@ Analyze current financial news without presenting personalized investment advice
 6. Identify affected instruments only when the relationship is evidence-backed.
 7. Present base, upside, and downside scenarios with explicit uncertainty.
 
-## Outpu
+## Output
 
 - Event summary
 - Source and timing

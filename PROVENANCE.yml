@@ -1,7 +1,7 @@
 bundle: rylai-codex-hermes-skills
-version: 1.0.0
+version: 1.1.0
 maintainer: Rylai
-release_date: '2026-08-09'
+release_date: '2026-08-13'
 policy:
   clean-room-original: Authored or independently rewritten for this edition by Rylai.
   adapted-open-source: Adapted from a pinned public GitHub revision with its upstream license and notice

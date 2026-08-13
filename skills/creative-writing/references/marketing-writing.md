@@ -1,6 +1,6 @@
 # Marketing Writing
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 Define the audience's current situation, desired outcome, awareness level, and
 main objection. Lead with the outcome, explain the mechanism, prove the claim,

@@ -1,14 +1,16 @@
 ---
 name: domain-name-brainstormer
-description: Generate brandable domain-name candidates, rank them against naming constraints, and perform live RDAP registration checks across selected TLDs. Use when Codex or Hermes needs to name a product, company, campaign, portfolio, community, or internal tool and verify candidate domains before recommending them.
+description: Generate and rank brandable domain candidates, then perform live RDAP registration checks across selected TLDs before recommending names.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "content"
+    category: content
+  claude:
+    category: content
 ---
 
 # Domain Name Brainstormer
@@ -25,7 +27,7 @@ Use this workflow to move from a naming brief to a short, checked domain list. T
    - compact compounds
    - invented pronounceable names
    - action or outcome names
-   - local-language or bilingual variants when relevan
+   - local-language or bilingual variants when relevant
 3. Remove candidates that are hard to spell, easy to mishear, misleading, or too close to a known competitor.
 4. Normalize each candidate to a complete domain before checking it.
 5. Run the bundled RDAP checker on the strongest candidates.
@@ -50,27 +52,27 @@ Run commands from this skill directory:
 
 ```powershell
 python scripts/check_domains.py rylailabs.com rylaiworks.dev rylaihub.ai
-
+```
 
 Apply one or more TLDs to bare name stems:
 
 ```powershell
 python scripts/check_domains.py rylailabs rylaiworks --tld com --tld dev --tld io
-
+```
 
 Write machine-readable results:
 
 ```powershell
 python scripts/check_domains.py rylailabs.com rylaiworks.dev --json results.json
-
+```
 
 Useful controls:
 
-```tex
+```text
 --timeout SECONDS
---workers COUN
+--workers COUNT
 --json PATH
-
+```
 
 The checker reports:
 
@@ -97,5 +99,5 @@ Keep unverified price estimates out of the answer. Domain prices and premium cla
 
 - The script uses Python's standard library and HTTPS RDAP requests.
 - Network access is required for live checks.
-- Codex and Hermes should resolve `scripts/check_domains.py` relative to this skill folder.
+- Codex, Hermes, and Claude should resolve `scripts/check_domains.py` relative to this skill folder.
 - If live access is unavailable, provide ideation only and label every availability field `not_checked`.

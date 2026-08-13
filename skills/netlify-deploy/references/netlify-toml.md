@@ -1,6 +1,6 @@
 # netlify.toml Guide
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 Keep configuration minimal and validate it against the installed Netlify CLI.
 
@@ -8,7 +8,7 @@ Keep configuration minimal and validate it against the installed Netlify CLI.
 [build]
   command = "npm run build"
   publish = "dist"
-
+```
 
 SPA fallback when the application uses client-side routing:
 
@@ -17,7 +17,7 @@ SPA fallback when the application uses client-side routing:
   from = "/*"
   to = "/index.html"
   status = 200
-
+```
 
 Redirect:
 
@@ -26,7 +26,7 @@ Redirect:
   from = "/old"
   to = "/new"
   status = 301
-
+```
 
 Header:
 
@@ -36,7 +36,7 @@ Header:
 
   [headers.values]
     X-Content-Type-Options = "nosniff"
-
+```
 
 Rules:
 

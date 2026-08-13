@@ -1,19 +1,21 @@
 ---
 name: notion-infographic
-description: Turn articles, notes, transcripts, or research into a consistent series of clean hand-drawn infographics. Use when Codex or Hermes should plan, generate, and visually verify a multi-image social or presentation series with concise text.
+description: Turn articles, notes, transcripts, or research into a consistent series of clean hand-drawn infographics with concise text and visual verification.
 metadata:
-  maintainer: "Rylai"
-  adapted_by: "Rylai"
-  edition: "Codex-Hermes"
-  edition_version: "2.0.0"
-  provenance: "clean-room-original"
+  maintainer: Rylai
+  adapted_by: Rylai
+  edition: Codex-Hermes-Claude
+  edition_version: 1.1.0
+  provenance: clean-room-original
   hermes:
-    category: "media"
+    category: media
+  claude:
+    category: media
 ---
 
 # Rylai Notes Infographic
 
-Create a coherent infographic series from source material. This is an original Rylai workflow for Codex and Hermes. The visual direction is a general notebook-style aesthetic and is not an official Notion product or brand asset.
+Create a coherent infographic series from source material. This is an original Rylai workflow for Codex, Hermes, and Claude. The visual direction is a general notebook-style aesthetic and is not an official Notion product or brand asset.
 
 ## Workflow
 
@@ -32,7 +34,7 @@ Create a coherent infographic series from source material. This is an original R
     "scene": "Concrete visual metaphor or diagram"
   }
 ]
-
+```
 
 5. Generate images one at a time so the next prompt can correct consistency problems.
 6. Inspect every result. Regenerate images with unreadable text, accidental logos, inconsistent characters, clipped content, or a different palette.
@@ -44,13 +46,13 @@ Build each prompt from a fixed style block plus one variable scene block.
 
 Fixed style block:
 
-```tex
+```text
 Rylai notebook infographic, editorial hand-drawn linework on warm white paper,
 confident imperfect marker strokes, simple flat shapes, generous whitespace,
 black ink with teal, coral, and golden-yellow accents, clear visual hierarchy,
 friendly human proportions, minimal decoration, no gradients, no 3D rendering,
 no photorealism, no logos, no watermark.
-
+```
 
 Variable scene block:
 
@@ -72,8 +74,8 @@ Do not add a cover or summary merely to increase the count. Merge overlapping id
 
 ## Runtime Mapping
 
-- Codex: use `image_gen`.
-- Hermes: use `image_generate` or the configured image backend.
+- Use an image-generation tool, MCP server, or API configured in the active runtime.
+- Do not assume a runtime-specific tool name exists; verify the available capability before generation.
 - If a backend cannot preserve a consistent character, use the best approved image as a visual reference for later generations.
 - Save outputs in the user's workspace with zero-padded names such as `infographic-01.png`.
 
@@ -85,4 +87,4 @@ Do not add a cover or summary merely to increase the count. Merge overlapping id
 - Palette, line quality, character design, margins, and aspect ratio match across the series.
 - No external logo, trademarked UI, remote asset, or creator signature appears unless the user supplied and authorized it.
 
-Authored by Rylai for Codex and Hermes.
+Authored by Rylai for Codex, Hermes, and Claude.

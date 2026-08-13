@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fill named placeholders in local text, DOCX, or PDF form files.
 
-Original utility maintained by Rylai for Codex and Hermes skill workflows.
+Original utility maintained by Rylai for Codex, Hermes, and Claude skill workflows.
 """
 
 from __future__ import annotations

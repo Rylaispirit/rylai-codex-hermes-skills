@@ -1,11 +1,11 @@
 # Academic Section Patterns
 
-> Portable Codex-Hermes replacement authored by Rylai.
+> Portable Codex-Hermes-Claude replacement authored by Rylai.
 
 These are rhetorical patterns, not claims to copy blindly. Replace brackets
 with verified content and vary wording to preserve the author's voice.
 
-## Abstrac
+## Abstract
 
 - Context: "[Task] is important because [specific consequence]."
 - Gap: "Existing approaches remain limited by [verified limitation]."
